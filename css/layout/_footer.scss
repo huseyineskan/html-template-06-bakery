@@ -1,0 +1,20 @@
+footer{
+    border-top: 1px solid $second-color;
+    padding-top: 20px;
+
+    .socials{
+        text-align: center;
+
+        li:not(:last-child){
+            padding-right: 20px;
+        }
+
+        a{
+            transition: 300ms;
+            &:hover{
+                color: $second-color;
+                transition: 300ms;
+            }
+        }
+    }
+}

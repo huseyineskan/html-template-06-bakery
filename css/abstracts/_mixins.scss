@@ -1,0 +1,15 @@
+@mixin align($par:center){
+    display: flex;
+    align-items: center;
+    justify-content: $par;
+}
+
+@mixin size($w:null, $h:null){
+    width: $w;
+    height: $h;
+}
+
+@mixin padmar($p:null,$m:null){
+    padding: $p;
+    margin: $m;
+}

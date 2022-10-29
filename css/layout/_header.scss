@@ -1,0 +1,92 @@
+header{
+    @include align(space-between);
+    
+    ::before{
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .open-mobile-menu,
+    .close-mobile-menu{
+        display: none;
+    }
+
+    span {
+        @include align();
+
+        i{
+            font-size: 24px;
+            color: $primary-color;
+        }
+    }
+
+    nav{
+        border-bottom: 1px solid $second-color;
+
+        a{
+            display: inline-block;
+            padding: 0 30px 10px;
+            height: 100%;
+            border-bottom: 2px solid transparent;
+            transition: 300ms;
+
+            &:hover{
+                color: $second-color;
+                border-color: $second-color;
+                transition: 300ms;
+            }
+        }
+    }
+}
+
+.item-active{
+    color: $second-color;
+    border-color: $second-color;
+    transition: 300ms;
+}
+
+@media only screen and (max-width: 768px){
+    header{
+
+        .open-mobile-menu,
+        .close-mobile-menu{
+            display: inline-block;
+        }
+
+        nav{
+            background: rgba($paper-color, 0.95);
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: -100%;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            transition: 200ms;
+            opacity: 0;
+            // display: none;
+
+            .close-mobile-menu{
+                position: absolute;
+                top: 15px;
+                left: 15px;
+            }
+
+            ul{
+                width: 100%;
+                text-align: center;
+                margin-top: 50%;
+
+                li{
+                    display: block;
+                    margin-bottom: 30px;
+
+                    a{
+                        font-size: 22px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+.btn{
+    display: inline-block;
+    padding: 10px 30px 6px 30px;
+    background-color: $primary-color;
+    color: $paper-color;
+    border-radius: 30px;
+    transition: 300ms;
+    border: 1px solid $primary-color !important;
+
+    &:hover{
+        color:$primary-color;
+        background-color: $second-color;
+        transition: 300ms;
+    }
+}
+
+input[type="submit"]{
+    &:hover{
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+    user-select: none;
+}
+
+body{
+    background-color: $body-color;
+    min-height: 100vh;
+    @include align();
+}
+
+ul{
+    list-style-type: none;
+
+    li{
+        display: inline-block;
+    }
+
+}
+
+a{
+    text-decoration: none;
+    color: $primary-color;
+}
+
+i{
+    &:hover{
+        cursor: pointer;
+    }
+}

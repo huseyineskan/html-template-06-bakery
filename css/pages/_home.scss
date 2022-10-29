@@ -1,0 +1,52 @@
+section {
+
+    padding: 100px 0;
+    .home > div{
+        flex-shrink: 1;
+    }
+    .home{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        .content{
+            text-align: center;
+            flex-basis: 50%;
+
+            .text{
+                @include padmar(20px 0, 20px 0);
+                text-align: left;
+                border-top: 1px solid $second-color;
+                border-bottom: 1px solid $second-color;
+
+                p:not(:last-child){
+                    margin-bottom: 10px
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1000px){
+    .home > img:first-child{
+        display: none !important;
+    }
+}
+
+
+@media only screen and (max-width: 768px){
+
+    section{
+        padding: 20% 0;
+    }
+
+    .home > img:last-child{
+        display: none !important;
+    }
+
+    .home {
+        .content{
+            flex-basis: 100% !important;
+        }
+    }
+}
